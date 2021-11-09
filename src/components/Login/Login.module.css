@@ -1,0 +1,13 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper > form {
+	margin-top: 64px;
+	width: 300px;
+}
+
+.icon {
+	color: rgba(0, 0, 0, 0.45) !important;
+}

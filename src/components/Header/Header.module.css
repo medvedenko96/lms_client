@@ -1,0 +1,44 @@
+.wrapper {
+	height: 64px;
+	box-shadow: 0 2px 8px #f0f1f2;
+	padding: 0 48px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	font-weight: 700;
+	font-size: 20px;
+	font-family: PuHuiTi, -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial,
+		noto sans, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji,
+		sans-serif;
+	margin-right: 40px;
+}
+
+.controlPanelDesktop {
+	display: flex;
+}
+
+.balance {
+	margin-right: 16px;
+}
+.user {
+}
+
+.burgerIcon:hover {
+	cursor: pointer;
+	color: #08c;
+}
+
+@media (max-width: 998px) {
+	.controlPanelDesktop {
+		display: none;
+	}
+}
+
+@media (min-width: 998px) {
+	.controlPanelMobile {
+		display: none;
+	}
+}

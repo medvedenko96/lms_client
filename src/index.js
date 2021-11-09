@@ -1,13 +1,29 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import { createBrowserHistory } from 'history';
 
-import App from './App';
+/* @Router */
+import Router from 'router';
 
-import './index.css';
+/* @Store */
+import configureStore from 'store';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+/* @Antd styles */
+import '../node_modules/antd/dist/antd.css';
+
+const history = createBrowserHistory();
+const Store = configureStore(history);
+
+const WrapperApp = () => {
+	return (
+		<Provider store={Store}>
+			<ConnectedRouter history={history}>
+				<Router />
+			</ConnectedRouter>
+		</Provider>
+	);
+};
+
+ReactDOM.render(<WrapperApp />, document.getElementById('root'));
