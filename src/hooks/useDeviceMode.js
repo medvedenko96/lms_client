@@ -17,10 +17,22 @@ function getWindowWidth() {
 	}
 }
 
+/*
+ 320px-480px: Mobile devices
+ 481px—768px: iPads, Tablets
+ 769px—1024px: Small screens, laptops
+ 1025px—1200px: Desktops, large screens
+ 1201px and more— Extra large screens, TV
+*/
+
 const getDeviseMode = windowWidth => {
 	let deviceMode = DEVICE_MODE.MOBILE;
 
-	if (windowWidth > 998) {
+	if (windowWidth > 480 && windowWidth <= 1023) {
+		deviceMode = DEVICE_MODE.TABLET;
+	}
+
+	if (windowWidth >= 1024) {
 		deviceMode = DEVICE_MODE.DESKTOP;
 	}
 
