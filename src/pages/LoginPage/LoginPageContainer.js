@@ -3,7 +3,7 @@ import React from 'react';
 /* @Components */
 import Login from 'components/Login';
 
-const LoginPageComponent = () => {
+const LoginPageContainer = () => {
 	const handleFormSubmit = values => {
 		// eslint-disable-next-line no-console
 		console.log(values);
@@ -12,4 +12,4 @@ const LoginPageComponent = () => {
 	return <Login onFormSubmit={handleFormSubmit} />;
 };
 
-export default LoginPageComponent;
+export default LoginPageContainer;
