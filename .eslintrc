@@ -1,43 +1,37 @@
 {
-  "root": true,
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true,
-    "amd": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended"
-  ],
-  "plugins": [
-    "react-hooks"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 2020,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  "rules": {
-    "no-console": "warn",
-    "jsx-a11y/href-no-hash": "off",
-    "import/no-anonymous-default-export": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": "off",
-    "jsx-a11y/label-has-for": "off",
-    "jsx-a11y/no-autofocus": "off",
-    "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/no-noninteractive-element-interactions": "off",
-    "jsx-a11y/no-static-element-interactions": "off",
-    "react/display-name": "off"
-  }
+	"root": true,
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true,
+		"amd": true
+	},
+	"extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+	"plugins": ["react-hooks"],
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"rules": {
+		"no-console": "warn",
+		"jsx-a11y/href-no-hash": "off",
+		"import/no-anonymous-default-export": "off",
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "warn",
+		"react/react-in-jsx-scope": "off",
+		"jsx-a11y/label-has-for": "off",
+		"jsx-a11y/no-autofocus": "off",
+		"jsx-a11y/click-events-have-key-events": "off",
+		"jsx-a11y/no-noninteractive-element-interactions": "off",
+		"jsx-a11y/no-static-element-interactions": "off",
+		"react/display-name": "off"
+	}
 }
