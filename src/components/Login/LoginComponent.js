@@ -1,5 +1,5 @@
 import React from 'react';
-import { node, object } from 'prop-types';
+import { elementType, object } from 'prop-types';
 import { Link } from 'react-router-dom';
 
 /* @Antd */
@@ -17,7 +17,7 @@ import css from './Login.module.css';
 
 const propTypes = {
 	intl: object,
-	Form: node,
+	FormComponent: elementType,
 	formik: object,
 	form: object,
 };
@@ -33,10 +33,7 @@ const LoginComponent = ({ intl, FormComponent, formik, form }) => {
 					validateStatus={errors.login}
 					onChange={handleChange}
 					value={values.login}
-					{...(errors.login && {
-						validateStatus: 'error',
-						help: errors.login,
-					})}
+					{...(errors.login && { validateStatus: 'error', help: errors.login })}
 				>
 					<Input
 						prefix={<UserOutlined className={css.icon} />}
@@ -47,10 +44,7 @@ const LoginComponent = ({ intl, FormComponent, formik, form }) => {
 					name="password"
 					onChange={handleChange}
 					value={values.password}
-					{...(errors.password && {
-						validateStatus: 'error',
-						help: errors.password,
-					})}
+					{...(errors.password && { validateStatus: 'error', help: errors.password })}
 				>
 					<Input.Password
 						prefix={<LockOutlined className={css.icon} />}

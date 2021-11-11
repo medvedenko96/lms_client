@@ -5,13 +5,18 @@
   "dependencies": {
     "@ant-design/icons": "^4.6.2",
     "antd": "^4.16.6",
+    "connected-react-router": "^6.9.1",
     "formik": "^2.2.9",
+    "history": "^4.10.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-intl": "^5.21.1",
+    "react-redux": "^7.2.6",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "redux": "^4.1.2",
+    "redux-thunk": "^2.4.0",
     "yup": "^0.32.9"
   },
   "scripts": {
@@ -20,24 +25,24 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/",
+    "lint:fix": "eslint --fix",
     "prettier": "prettier --write \"**/*.+(js|jsx)\"",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,css,md}": "prettier"
   },
   "browserslist": [
     "last 2 version",
     "not dead"
   ],
   "devDependencies": {
-    "connected-react-router": "^6.9.1",
-    "history": "^4.10.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.3.2",
-    "react-redux": "^7.2.4",
-    "redux": "^4.1.0",
-    "redux-thunk": "^2.3.0"
+    "prettier": "^2.4.1"
   }
 }
