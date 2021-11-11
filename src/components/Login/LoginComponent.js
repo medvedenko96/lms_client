@@ -12,12 +12,13 @@ import LockOutlined from '@ant-design/icons/LockOutlined';
 import styles from './Login.module.css';
 
 const propTypes = {
+	intl: object,
 	Form: node,
 	formik: object,
 	form: object,
 };
 
-const LoginComponent = ({ FormComponent, formik, form }) => {
+const LoginComponent = ({ intl, FormComponent, formik, form }) => {
 	const { handleSubmit, errors, values, handleChange } = formik;
 
 	return (
@@ -36,7 +37,7 @@ const LoginComponent = ({ FormComponent, formik, form }) => {
 				>
 					<Input
 						prefix={<UserOutlined className={styles.icon} />}
-						placeholder="E-mail или логин"
+						placeholder={intl.formatMessage({ id: 'auth.email' })}
 					/>
 				</FormComponent.Item>
 				<FormComponent.Item
@@ -50,7 +51,7 @@ const LoginComponent = ({ FormComponent, formik, form }) => {
 				>
 					<Input.Password
 						prefix={<LockOutlined className={styles.icon} />}
-						placeholder="Пароль"
+						placeholder={intl.formatMessage({ id: 'auth.password' })}
 						autoComplete="on"
 					/>
 				</FormComponent.Item>

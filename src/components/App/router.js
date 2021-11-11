@@ -15,11 +15,11 @@ const Router = () => {
 
 	return (
 		<Switch>
-			<Route exect path="/login" render={props => <LoginPage {...props} />} />
-			<Route exect path="/registration" render={props => <RegistrationPage {...props} />} />
-			<Route exect path="/resetPassword" render={props => <ResetPasswordPage {...props} />} />
-			<Route exect path="/dashboard" render={props => <DashboardPage {...props} />} />
-			<Route render={props => <div {...props}>Not found 404</div>} />
+			<Route exect path="/login" render={() => <LoginPage />} />
+			<Route exect path="/registration" render={() => <RegistrationPage />} />
+			<Route exect path="/resetPassword" render={() => <ResetPasswordPage />} />
+			<Route exect path="/dashboard" render={() => <DashboardPage />} />
+			<Route render={() => <div>Not found 404</div>} />
 		</Switch>
 	);
 };
