@@ -1,15 +1,19 @@
 import React from 'react';
 import { node, object } from 'prop-types';
+import { Link } from 'react-router-dom';
 
 /* @Antd */
-import { Input, Button } from 'antd';
+import { Input, Button, Checkbox } from 'antd';
 
 /* @Icons */
 import UserOutlined from '@ant-design/icons/UserOutlined';
 import LockOutlined from '@ant-design/icons/LockOutlined';
 
+/* @Constants */
+import { ROUTERS_PATHS } from 'constants/paths';
+
 /* @Styles */
-import styles from './Login.module.css';
+import css from './Login.module.css';
 
 const propTypes = {
 	intl: object,
@@ -22,11 +26,10 @@ const LoginComponent = ({ intl, FormComponent, formik, form }) => {
 	const { handleSubmit, errors, values, handleChange } = formik;
 
 	return (
-		<div className={styles.wrapper}>
+		<div className={css.wrapper}>
 			<FormComponent form={form} id="login-manager" onFinish={handleSubmit}>
 				<FormComponent.Item
 					name="login"
-					wrapperCol={{ span: 24, offset: 0 }}
 					validateStatus={errors.login}
 					onChange={handleChange}
 					value={values.login}
@@ -36,7 +39,7 @@ const LoginComponent = ({ intl, FormComponent, formik, form }) => {
 					})}
 				>
 					<Input
-						prefix={<UserOutlined className={styles.icon} />}
+						prefix={<UserOutlined className={css.icon} />}
 						placeholder={intl.formatMessage({ id: 'auth.email' })}
 					/>
 				</FormComponent.Item>
@@ -50,14 +53,33 @@ const LoginComponent = ({ intl, FormComponent, formik, form }) => {
 					})}
 				>
 					<Input.Password
-						prefix={<LockOutlined className={styles.icon} />}
+						prefix={<LockOutlined className={css.icon} />}
 						placeholder={intl.formatMessage({ id: 'auth.password' })}
 						autoComplete="on"
 					/>
 				</FormComponent.Item>
-				<Button form="login-manager" type="primary" htmlType="submit">
-					Войти
+				<div className={css.forgotPasswordWrapper}>
+					<FormComponent.Item name="remember" noStyle>
+						<Checkbox checked={values.remember} onChange={handleChange}>
+							{intl.formatMessage({ id: 'auth.rememberMe' })}
+						</Checkbox>
+					</FormComponent.Item>
+					<Link to={ROUTERS_PATHS.RESET_PASSWORD}>
+						{intl.formatMessage({ id: 'auth.forgotPassword' })}
+					</Link>
+				</div>
+				<Button
+					form="login-manager"
+					type="primary"
+					htmlType="submit"
+					className={css.button}
+				>
+					{intl.formatMessage({ id: 'auth.signIn' })}
 				</Button>
+				{intl.formatMessage({ id: 'auth.or' })}{' '}
+				<Link to={ROUTERS_PATHS.REGISTRATION}>
+					{intl.formatMessage({ id: 'auth.registerNow' })}
+				</Link>
 			</FormComponent>
 		</div>
 	);

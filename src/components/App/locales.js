@@ -7,6 +7,10 @@ const locales = {
 			email: 'E-mail',
 			password: 'Пароль',
 			signIn: 'Войти',
+			forgotPassword: 'Забыли пароль ?',
+			rememberMe: 'Запомнить меня',
+			or: 'Или',
+			registerNow: 'зарегистрируйтесь сейчас!',
 		},
 	},
 	ua: {
@@ -17,6 +21,10 @@ const locales = {
 			email: 'E-mail',
 			password: 'Пароль',
 			signIn: 'Увійти',
+			forgotPassword: 'Забули пароль ?',
+			rememberMe: "Запам'ятати мене",
+			or: 'Або',
+			registerNow: 'зареєструйтесь зараз!',
 		},
 	},
 };

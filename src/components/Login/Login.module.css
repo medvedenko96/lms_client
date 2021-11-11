@@ -1,13 +1,24 @@
 .wrapper {
 	display: flex;
 	justify-content: center;
+	margin-top: 128px;
 }
 
 .wrapper > form {
-	margin-top: 64px;
-	width: 300px;
+	max-width: 300px;
 }
 
 .icon {
 	color: rgba(0, 0, 0, 0.45) !important;
+}
+
+.forgotPasswordWrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+
+.button {
+	width: 100%;
+	margin-bottom: 2px;
 }

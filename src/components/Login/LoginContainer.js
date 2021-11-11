@@ -29,6 +29,7 @@ const LoginContainer = ({ onFormSubmit }) => {
 		initialValues: {
 			login: '',
 			password: '',
+			remember: true,
 		},
 		validateOnChange: false,
 		validationSchema,

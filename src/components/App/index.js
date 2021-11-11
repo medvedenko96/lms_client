@@ -10,8 +10,8 @@ import { flattenMessages } from 'utils/flattenMessages';
 /* @locales */
 import locales from './locales';
 
-/* @Antd styles */
-import '../../../node_modules/antd/dist/antd.css';
+/* @Styles */
+import './index.css';
 
 const RU = 'ru';
 
