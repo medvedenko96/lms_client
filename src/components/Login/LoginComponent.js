@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import { Input, Button, Checkbox } from 'antd';
 
 /* @Icons */
-import UserOutlined from '@ant-design/icons/UserOutlined';
 import LockOutlined from '@ant-design/icons/LockOutlined';
+import MailOutlined from '@ant-design/icons/MailOutlined';
 
 /* @Constants */
 import { ROUTERS_PATHS } from 'constants/paths';
@@ -36,7 +36,7 @@ const LoginComponent = ({ intl, FormComponent, formik, form }) => {
 					{...(errors.email && { validateStatus: 'error', help: errors.email })}
 				>
 					<Input
-						prefix={<UserOutlined className={css.icon} />}
+						prefix={<MailOutlined className={css.icon} />}
 						placeholder={intl.formatMessage({ id: 'auth.email' })}
 					/>
 				</FormComponent.Item>

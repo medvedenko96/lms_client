@@ -19,7 +19,9 @@ const LoginContainer = ({ onFormSubmit }) => {
 	const [form] = Form.useForm();
 
 	const validationSchema = Yup.object().shape({
-		email: Yup.string().required(intl.formatMessage({ id: 'validationMessage.requiredField' })),
+		email: Yup.string()
+			.email(intl.formatMessage({ id: 'validationMessage.invalidEmail' }))
+			.required(intl.formatMessage({ id: 'validationMessage.requiredField' })),
 		password: Yup.string().required(
 			intl.formatMessage({ id: 'validationMessage.requiredField' })
 		),
