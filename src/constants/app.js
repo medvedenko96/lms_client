@@ -3,3 +3,8 @@ export const DEVICE_MODE = {
 	TABLET: 'tablet',
 	DESKTOP: 'desktop',
 };
+
+export const ENV = {
+	PRODUCTION: 'production',
+	DEVELOPMENT: 'development',
+};

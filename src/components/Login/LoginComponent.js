@@ -27,13 +27,13 @@ const LoginComponent = ({ intl, FormComponent, formik, form }) => {
 
 	return (
 		<div className={css.wrapper}>
-			<FormComponent form={form} id="login-manager" onFinish={handleSubmit}>
+			<FormComponent form={form} id="login" onFinish={handleSubmit}>
 				<FormComponent.Item
-					name="login"
-					validateStatus={errors.login}
+					name="email"
+					validateStatus={errors.email}
 					onChange={handleChange}
-					value={values.login}
-					{...(errors.login && { validateStatus: 'error', help: errors.login })}
+					value={values.email}
+					{...(errors.email && { validateStatus: 'error', help: errors.email })}
 				>
 					<Input
 						prefix={<UserOutlined className={css.icon} />}
@@ -53,8 +53,8 @@ const LoginComponent = ({ intl, FormComponent, formik, form }) => {
 					/>
 				</FormComponent.Item>
 				<div className={css.forgotPasswordWrapper}>
-					<FormComponent.Item name="remember" noStyle>
-						<Checkbox checked={values.remember} onChange={handleChange}>
+					<FormComponent.Item name="isRememberMe" noStyle>
+						<Checkbox checked={values.isRememberMe} onChange={handleChange}>
 							{intl.formatMessage({ id: 'auth.rememberMe' })}
 						</Checkbox>
 					</FormComponent.Item>
@@ -62,12 +62,7 @@ const LoginComponent = ({ intl, FormComponent, formik, form }) => {
 						{intl.formatMessage({ id: 'auth.forgotPassword' })}
 					</Link>
 				</div>
-				<Button
-					form="login-manager"
-					type="primary"
-					htmlType="submit"
-					className={css.button}
-				>
+				<Button form="login" type="primary" htmlType="submit" className={css.button}>
 					{intl.formatMessage({ id: 'auth.signIn' })}
 				</Button>
 				{intl.formatMessage({ id: 'auth.or' })}{' '}

@@ -19,7 +19,7 @@ const LoginContainer = ({ onFormSubmit }) => {
 	const [form] = Form.useForm();
 
 	const validationSchema = Yup.object().shape({
-		login: Yup.string().required(intl.formatMessage({ id: 'validationMessage.requiredField' })),
+		email: Yup.string().required(intl.formatMessage({ id: 'validationMessage.requiredField' })),
 		password: Yup.string().required(
 			intl.formatMessage({ id: 'validationMessage.requiredField' })
 		),
@@ -27,9 +27,9 @@ const LoginContainer = ({ onFormSubmit }) => {
 
 	const formik = useFormik({
 		initialValues: {
-			login: '',
+			email: '',
 			password: '',
-			remember: true,
+			isRememberMe: true,
 		},
 		validateOnChange: false,
 		validationSchema,
