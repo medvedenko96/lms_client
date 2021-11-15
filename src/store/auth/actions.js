@@ -4,10 +4,13 @@ import { auth } from 'service/api';
 /* @Constants */
 import { LOGIN, REGISTRATION } from './constants';
 
+/* @Utils */
+import { snakeToCamelMapper } from 'utils/snakeToCamel';
+
 export const registerAction =
-	({ name, email, password, isRememberMe }) =>
+	({ name, email, password, passwordConfirm }) =>
 	async dispatch => {
-		await auth.register({ name, email, password, isRememberMe });
+		await auth.register(snakeToCamelMapper({ name, email, password, passwordConfirm }));
 
 		dispatch({ type: LOGIN });
 	};

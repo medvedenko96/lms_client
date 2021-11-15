@@ -18,6 +18,7 @@ const requestFactory = async ({ url, method = 'get', data = null }) => {
 			respData = resp;
 		}
 	} catch (error) {
+		// eslint-disable-next-line no-console
 		console.error(new Error(error));
 		throw error;
 	}

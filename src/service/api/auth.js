@@ -9,10 +9,9 @@ export default {
 		return requestFactory({ url, method, data });
 	},
 
-	register({ name, email, password, isRememberMe }) {
+	register(data) {
 		const method = 'post';
 		const url = '/api/register';
-		const data = { name, email, password, isRememberMe };
 
 		return requestFactory({ url, method, data });
 	},

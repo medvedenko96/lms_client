@@ -4,7 +4,7 @@ const locales = {
 			requiredField: 'Обязательное поле',
 			invalidEmail: 'Неправильно введенный Email',
 			invalidConfirmPassword: 'Два введенных вами пароля не совпадают!',
-			passwordLength: 'Пароль должен содержать не менее 8 символов',
+			passwordLength: 'Пароль должен содержать не менее 5 символов',
 		},
 		auth: {
 			name: 'Имя',
@@ -24,7 +24,7 @@ const locales = {
 			requiredField: "Обов'язкове поле",
 			invalidEmail: 'Неправильно введений Email',
 			invalidConfirmPassword: 'Два введені вами паролі не збігаються!',
-			passwordLength: 'Пароль повинен містити не менше 8 символів',
+			passwordLength: 'Пароль повинен містити не менше 5 символів',
 		},
 		auth: {
 			name: "Ім'я",

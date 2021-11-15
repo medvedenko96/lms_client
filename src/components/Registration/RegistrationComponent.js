@@ -66,7 +66,7 @@ const RegistrationComponent = ({ intl, FormComponent, formik, form }) => {
 					/>
 				</FormComponent.Item>
 				<FormComponent.Item
-					name="passwordConfirmation"
+					name="passwordConfirm"
 					onChange={handleChange}
 					value={values.passwordConfirmation}
 					{...(errors.passwordConfirmation && {

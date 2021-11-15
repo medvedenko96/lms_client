@@ -25,8 +25,8 @@ const RegistrationContainer = ({ onFormSubmit }) => {
 			.required(intl.formatMessage({ id: 'validationMessage.requiredField' })),
 		password: Yup.string()
 			.required(intl.formatMessage({ id: 'validationMessage.requiredField' }))
-			.min(8, intl.formatMessage({ id: 'validationMessage.passwordLength' })),
-		passwordConfirmation: Yup.string()
+			.min(5, intl.formatMessage({ id: 'validationMessage.passwordLength' })),
+		passwordConfirm: Yup.string()
 			.required(intl.formatMessage({ id: 'validationMessage.requiredField' }))
 			.oneOf(
 				[Yup.ref('password'), null],
@@ -39,6 +39,7 @@ const RegistrationContainer = ({ onFormSubmit }) => {
 			name: '',
 			email: '',
 			password: '',
+			passwordConfirm: '',
 		},
 		validateOnChange: false,
 		validationSchema,
