@@ -1,12 +1,11 @@
 import axios from 'axios';
-import { isProductionEnv } from 'store/app/selectors';
 
 const requestFactory = async ({ url, method = 'get', data = null }) => {
 	let respData = null;
 	let options = null;
 
 	try {
-		options = { url: isProductionEnv() ? `app${url}` : url, method, data };
+		options = { url, method, data };
 
 		const resp = await axios(options);
 		const contentType = resp.headers.get('content-type');
